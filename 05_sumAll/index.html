@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sumAll = function(numOne, numTwo) {
+    if ((numOne < 0) || (numTwo < 0) || (Array.isArray(numOne) === true) || 
+    (Array.isArray(numTwo) === true) || (typeof numOne === "string") || 
+    (typeof numTwo === "string")) {
+        return "ERROR";
+    } else if (numOne > numTwo) {
+        let greaterNum = numOne;
+        let lessorNum = numTwo;
+    } else {
+        let greaterNum = numTwo;
+        let lessorNum = numOne;
+    }
+
+    let totalSum = 0;
+    console.log(greaterNum, lessorNum);
+
+    for (let i = lessorNum; i <= greaterNum; i++) {
+        totalSum += i;
+    }
+
+    return totalSum;
+};
+    </script>
+</body>
+</html>

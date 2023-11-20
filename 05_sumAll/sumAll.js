@@ -1,8 +1,6 @@
 const sumAll = function(numOne, numTwo) {
-    if ((numOne < 0) || (numTwo < 0) || //(Array.isArray(numOne) === true) || 
-    //(Array.isArray(numTwo) === true) || (typeof numOne === "string") || 
-    //(typeof numTwo === "string")) {
-    (Number.isNaN(numOne) === true) || (Number.isNaN(numTwo) === true)){
+    if ((numOne < 0) || (numTwo < 0) || 
+    (Number.isInteger(numOne) === false) || (Number.isInteger(numTwo) === false)){
         return "ERROR";
     } else if (numOne > numTwo) {
         let greaterNum = numOne;

@@ -7,10 +7,9 @@
 </head>
 <body>
     <script>
-        const sumAll = function(numOne, numTwo) {
-    if ((numOne < 0) || (numTwo < 0) || (Array.isArray(numOne) === true) || 
-    (Array.isArray(numTwo) === true) || (typeof numOne === "string") || 
-    (typeof numTwo === "string")) {
+    const sumAll = function(numOne, numTwo) {
+    if ((numOne < 0) || (numTwo < 0) || 
+    (Number.isInteger(numOne) === false) || (Number.isInteger(numTwo) === false)){
         return "ERROR";
     } else if (numOne > numTwo) {
         let greaterNum = numOne;
@@ -20,8 +19,9 @@
         let lessorNum = numOne;
     }
 
+    let greaterNum = 0;
+    let lessorNum = 0;
     let totalSum = 0;
-    console.log(greaterNum, lessorNum);
 
     for (let i = lessorNum; i <= greaterNum; i++) {
         totalSum += i;
